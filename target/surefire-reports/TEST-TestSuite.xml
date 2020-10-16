@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="20.788" tests="2" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="webdriver.chrome.driver" value=".//src//main//resources//webdrivers//chromedriver.exe"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\olegs\automationFramework\target\test-classes;C:\Users\olegs\automationFramework\target\classes;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\olegs\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\olegs\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\olegs\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\olegs\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\olegs\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\olegs\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\olegs\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\olegs\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\olegs\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\olegs\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\olegs\.m2\repository\org\testng\testng\7.3.0\testng-7.3.0.jar;C:\Users\olegs\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\olegs\.m2\repository\org\apache\ant\ant\1.10.3\ant-1.10.3.jar;C:\Users\olegs\.m2\repository\org\apache\ant\ant-launcher\1.10.3\ant-launcher-1.10.3.jar;C:\Users\olegs\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\olegs\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\olegs\.m2\repository\com\google\inject\guice\4.2.2\guice-4.2.2-no_aop.jar;C:\Users\olegs\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\olegs\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\olegs\.m2\repository\org\yaml\snakeyaml\1.21\snakeyaml-1.21.jar;C:\Users\olegs\.m2\repository\org\apache\logging\log4j\log4j-core\2.13.3\log4j-core-2.13.3.jar;C:\Users\olegs\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;C:\Users\olegs\.m2\repository\commons-io\commons-io\2.8.0\commons-io-2.8.0.jar;"/>
+    <property name="java.vm.vendor" value="AdoptOpenJDK"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptopenjdk.net/"/>
+    <property name="user.timezone" value="EET"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot\bin"/>
+    <property name="sun.java.command" value="C:\Users\olegs\AppData\Local\Temp\surefire13522723623475613929\surefirebooter14146258747935143317.jar C:\Users\olegs\AppData\Local\Temp\surefire13522723623475613929 2020-10-16T16-09-08_240-jvmRun1 surefire8526045157019954847tmp surefire_08919267850321523629tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\olegs\automationFramework\target\test-classes;C:\Users\olegs\automationFramework\target\classes;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\olegs\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\olegs\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\olegs\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\olegs\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\olegs\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\olegs\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\olegs\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\olegs\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\olegs\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\olegs\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\olegs\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\olegs\.m2\repository\org\testng\testng\7.3.0\testng-7.3.0.jar;C:\Users\olegs\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\olegs\.m2\repository\org\apache\ant\ant\1.10.3\ant-1.10.3.jar;C:\Users\olegs\.m2\repository\org\apache\ant\ant-launcher\1.10.3\ant-launcher-1.10.3.jar;C:\Users\olegs\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\olegs\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\olegs\.m2\repository\com\google\inject\guice\4.2.2\guice-4.2.2-no_aop.jar;C:\Users\olegs\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\olegs\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\olegs\.m2\repository\org\yaml\snakeyaml\1.21\snakeyaml-1.21.jar;C:\Users\olegs\.m2\repository\org\apache\logging\log4j\log4j-core\2.13.3\log4j-core-2.13.3.jar;C:\Users\olegs\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;C:\Users\olegs\.m2\repository\commons-io\commons-io\2.8.0\commons-io-2.8.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\olegs"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-07-14"/>
+    <property name="java.home" value="C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\olegs\automationFramework"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\olegs\AppData\Local\Temp\surefire13522723623475613929\surefirebooter14146258747935143317.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.8+10"/>
+    <property name="user.name" value="olegs"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="AdoptOpenJDK"/>
+    <property name="localRepository" value="C:\Users\olegs\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/AdoptOpenJDK/openjdk-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\olegs\AppData\Local\Temp\"/>
+    <property name="java.version" value="11.0.8"/>
+    <property name="user.dir" value="C:\Users\olegs\automationFramework"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot\bin;C:\Python39\Scripts\;C:\Python39\;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenJDK\jdk-14.0.2\bin;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\olegs\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\olegs\AppData\Local\Programs\Python\Python38-32\;C:\Users\olegs\AppData\Local\Microsoft\WindowsApps;C:\Users\olegs\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\olegs\AppData\Roaming\npm;C:\Users\olegs\AppData\Local\GitHubDesktop\bin;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="AdoptOpenJDK"/>
+    <property name="java.vm.version" value="11.0.8+10"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="amHomePageLanguageChangeTest" classname="com.automationproject.AMHomePageTest" time="3.271">
+    <failure message="expected [2] but found [1]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [2] but found [1]
+	at com.automationproject.AMHomePageTest.amHomePageLanguageChangeTest(AMHomePageTest.java:43)
+]]></failure>
+    <system-out><![CDATA[2020-10-16 16:09:12,746 main DEBUG Apache Log4j Core 2.13.3 initializing configuration XmlConfiguration[location=C:\Users\olegs\automationFramework\target\classes\log4j2.xml]
+2020-10-16 16:09:12,762 main DEBUG Installed 1 script engine
+2020-10-16 16:09:13,109 main DEBUG Oracle Nashorn version: 11.0.8, language: ECMAScript, threading: Not Thread Safe, compile: true, names: [nashorn, Nashorn, js, JS, JavaScript, javascript, ECMAScript, ecmascript], factory class: jdk.nashorn.api.scripting.NashornScriptEngineFactory
+2020-10-16 16:09:13,111 main DEBUG PluginManager 'Core' found 122 plugins
+2020-10-16 16:09:13,112 main DEBUG PluginManager 'Level' found 0 plugins
+2020-10-16 16:09:13,119 main DEBUG Building Plugin[name=property, class=org.apache.logging.log4j.core.config.Property].
+2020-10-16 16:09:13,137 main TRACE TypeConverterRegistry initializing.
+2020-10-16 16:09:13,137 main DEBUG PluginManager 'TypeConverter' found 26 plugins
+2020-10-16 16:09:13,144 main DEBUG createProperty(name="basePath", value="./logs")
+2020-10-16 16:09:13,144 main DEBUG Building Plugin[name=properties, class=org.apache.logging.log4j.core.config.PropertiesPlugin].
+2020-10-16 16:09:13,158 main DEBUG configureSubstitutor(={basePath=./logs}, Configuration(C:\Users\olegs\automationFramework\target\classes\log4j2.xml))
+2020-10-16 16:09:13,158 main DEBUG PluginManager 'Lookup' found 16 plugins
+2020-10-16 16:09:13,162 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2020-10-16 16:09:13,170 main DEBUG PatternLayout$Builder(pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n", PatternSelector=null, Configuration(C:\Users\olegs\automationFramework\target\classes\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2020-10-16 16:09:13,171 main DEBUG PluginManager 'Converter' found 44 plugins
+2020-10-16 16:09:13,173 main DEBUG Building Plugin[name=SizeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.SizeBasedTriggeringPolicy].
+2020-10-16 16:09:13,176 main DEBUG createPolicy(size="5000")
+2020-10-16 16:09:13,178 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.RollingFileAppender].
+2020-10-16 16:09:13,191 main DEBUG RollingFileAppender$Builder(fileName="./logs/prints.log", filePattern="./logs/prints-%d{yyyy-MM-dd}.log", append="null", locking="null", SizeBasedTriggeringPolicy(SizeBasedTriggeringPolicy(size=5000)), Strategy=null, advertise="null", advertiseUri="null", createOnDemand="null", filePermissions="null", fileOwner="null", fileGroup="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n), name="File", Configuration(C:\Users\olegs\automationFramework\target\classes\log4j2.xml), Filter=null, ={})
+2020-10-16 16:09:13,203 main TRACE New file './logs/prints.log' created = false
+2020-10-16 16:09:13,209 main DEBUG Returning file creation time for C:\Users\olegs\automationFramework\.\logs\prints.log
+2020-10-16 16:09:13,210 main DEBUG Starting RollingFileManager ./logs/prints.log
+2020-10-16 16:09:13,212 main DEBUG PluginManager 'FileConverter' found 2 plugins
+2020-10-16 16:09:13,234 main DEBUG Setting prev file time to 2020-10-16T15:07:52.580+0300
+2020-10-16 16:09:13,235 main DEBUG Initializing triggering policy SizeBasedTriggeringPolicy(size=5000)
+2020-10-16 16:09:13,235 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2020-10-16 16:09:13,236 main DEBUG PatternLayout$Builder(pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n", PatternSelector=null, Configuration(C:\Users\olegs\automationFramework\target\classes\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2020-10-16 16:09:13,237 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
+2020-10-16 16:09:13,239 main DEBUG ConsoleAppender$Builder(target="SYSTEM_OUT", follow="null", direct="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n), name="Console", Configuration(C:\Users\olegs\automationFramework\target\classes\log4j2.xml), Filter=null, ={})
+2020-10-16 16:09:13,242 main DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false
+2020-10-16 16:09:13,243 main DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
+2020-10-16 16:09:13,244 main DEBUG createAppenders(={File, Console})
+2020-10-16 16:09:13,244 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2020-10-16 16:09:13,246 main DEBUG createAppenderRef(ref="Console", level="null", Filter=null)
+2020-10-16 16:09:13,247 main DEBUG Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
+2020-10-16 16:09:13,248 main DEBUG createLogger(additivity="null", level="TRACE", includeLocation="null", ={Console}, ={}, Configuration(C:\Users\olegs\automationFramework\target\classes\log4j2.xml), Filter=null)
+2020-10-16 16:09:13,251 main DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
+2020-10-16 16:09:13,253 main DEBUG createLoggers(={root})
+2020-10-16 16:09:13,253 main DEBUG Configuration XmlConfiguration[location=C:\Users\olegs\automationFramework\target\classes\log4j2.xml] initialized
+2020-10-16 16:09:13,254 main DEBUG Starting configuration XmlConfiguration[location=C:\Users\olegs\automationFramework\target\classes\log4j2.xml]
+2020-10-16 16:09:13,254 main DEBUG Started configuration XmlConfiguration[location=C:\Users\olegs\automationFramework\target\classes\log4j2.xml] OK.
+2020-10-16 16:09:13,255 main TRACE Stopping org.apache.logging.log4j.core.config.DefaultConfiguration@248e319b...
+2020-10-16 16:09:13,256 main TRACE DefaultConfiguration notified 1 ReliabilityStrategies that config will be stopped.
+2020-10-16 16:09:13,256 main TRACE DefaultConfiguration stopping root LoggerConfig.
+2020-10-16 16:09:13,256 main TRACE DefaultConfiguration notifying ReliabilityStrategies that appenders will be stopped.
+2020-10-16 16:09:13,257 main TRACE DefaultConfiguration stopping remaining Appenders.
+2020-10-16 16:09:13,257 main DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-1
+2020-10-16 16:09:13,258 main DEBUG OutputStream closed
+2020-10-16 16:09:13,258 main DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-1, all resources released: true
+2020-10-16 16:09:13,258 main DEBUG Appender DefaultConsole-1 stopped with status true
+2020-10-16 16:09:13,258 main TRACE DefaultConfiguration stopped 1 remaining Appenders.
+2020-10-16 16:09:13,259 main TRACE DefaultConfiguration cleaning Appenders from 1 LoggerConfigs.
+2020-10-16 16:09:13,259 main DEBUG Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@248e319b OK
+2020-10-16 16:09:13,326 main TRACE Reregistering MBeans after reconfigure. Selector=org.apache.logging.log4j.core.selector.ClassLoaderContextSelector@741b3bc3
+2020-10-16 16:09:13,328 main TRACE Reregistering context (1/1): '30946e09' org.apache.logging.log4j.core.LoggerContext@2ed3b1f5
+2020-10-16 16:09:13,329 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=30946e09'
+2020-10-16 16:09:13,329 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=30946e09,component=StatusLogger'
+2020-10-16 16:09:13,330 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=30946e09,component=ContextSelector'
+2020-10-16 16:09:13,331 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=30946e09,component=Loggers,name=*'
+2020-10-16 16:09:13,332 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=30946e09,component=Appenders,name=*'
+2020-10-16 16:09:13,332 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=30946e09,component=AsyncAppenders,name=*'
+2020-10-16 16:09:13,333 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=30946e09,component=AsyncLoggerRingBuffer'
+2020-10-16 16:09:13,333 main TRACE Unregistering but no MBeans found matching 'org.apache.logging.log4j2:type=30946e09,component=Loggers,name=*,subtype=RingBuffer'
+2020-10-16 16:09:13,335 main DEBUG Registering MBean org.apache.logging.log4j2:type=30946e09
+2020-10-16 16:09:13,335 main DEBUG Registering MBean org.apache.logging.log4j2:type=30946e09,component=StatusLogger
+2020-10-16 16:09:13,335 main DEBUG Registering MBean org.apache.logging.log4j2:type=30946e09,component=ContextSelector
+2020-10-16 16:09:13,344 main DEBUG Registering MBean org.apache.logging.log4j2:type=30946e09,component=Loggers,name=
+2020-10-16 16:09:13,346 main DEBUG Registering MBean org.apache.logging.log4j2:type=30946e09,component=Appenders,name=Console
+2020-10-16 16:09:13,347 main DEBUG Registering MBean org.apache.logging.log4j2:type=30946e09,component=Appenders,name=File
+2020-10-16 16:09:13,351 main TRACE Using default SystemClock for timestamps.
+2020-10-16 16:09:13,351 main DEBUG org.apache.logging.log4j.core.util.SystemClock supports precise timestamps.
+2020-10-16 16:09:13,354 main TRACE Using DummyNanoClock for nanosecond timestamps.
+2020-10-16 16:09:13,355 main DEBUG Reconfiguration complete for context[name=30946e09] at URI C:\Users\olegs\automationFramework\target\classes\log4j2.xml (org.apache.logging.log4j.core.LoggerContext@2ed3b1f5) with optional ClassLoader: null
+2020-10-16 16:09:13,355 main DEBUG Shutdown hook enabled. Registering a new one.
+2020-10-16 16:09:13,355 main DEBUG LoggerContext[name=30946e09, org.apache.logging.log4j.core.LoggerContext@2ed3b1f5] started OK.
+16:09:20.331 [TestNG-tests-1] INFO  com.myautomationproject.BaseClass - Driver is initialized.
+16:09:21.992 [TestNG-tests-1] INFO  com.myautomationproject.BaseClass - Homepage is loaded.
+16:09:22.969 [TestNG-tests-1] INFO  com.myautomationproject.BaseClass - Popup window is closed.
+16:09:24.804 [TestNG-tests-1] INFO  com.myautomationproject.BaseClass - Language is changed to RO.
+16:09:25.202 [TestNG-tests-1] INFO  com.myautomationproject.BaseClass - Validated the language change.
+16:09:26.102 [TestNG-tests-1] INFO  com.myautomationproject.BaseClass - Changed the language back to RU.
+]]></system-out>
+    <system-err><![CDATA[Warning: Nashorn engine is planned to be removed from a future JDK release
+Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 40622
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+???. 16, 2020 4:09:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="amHomePageTitleTest" classname="com.automationproject.AMHomePageTest" time="2.124">
+    <system-out><![CDATA[16:09:29.755 [TestNG-tests-1] INFO  com.myautomationproject.BaseClass - The default language is RU.
+16:09:29.764 [TestNG-tests-1] INFO  com.myautomationproject.BaseClass - Validated the title according to default language.
+]]></system-out>
+  </testcase>
+</testsuite>

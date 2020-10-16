@@ -9,23 +9,16 @@ import org.openqa.selenium.support.ui.Select;
 public class AMHomePage {
     public WebDriver driver;
 
-    By registerButton = By.cssSelector("a[href*='LogOn']");
     By dialogPopupCloseButton = By.cssSelector("span.ui-button-text");
     By languageMenuRo = By.xpath("//a[text()='RO']");
     By languageMenuRu = By.xpath("//a[text()='RU']");
+    By languageMenuDefault = By.cssSelector(".slct");
     By languageBar = By.cssSelector(".select");
 
     public AMHomePage(WebDriver driver){
         this.driver = driver;
     }
 
-    public WebElement getRegisterButton(){
-        return driver.findElement(registerButton);
-    }
-
-    public By getDialogPopupCloseButtonBy(){
-        return dialogPopupCloseButton;
-    }
 
     public  WebElement getDialogPopupCLoseButton(){
         return driver.findElement(dialogPopupCloseButton);
@@ -43,6 +36,10 @@ public class AMHomePage {
             languageMenu =  driver.findElement(languageMenuRu);
         }
         return languageMenu;
+    }
+
+    public WebElement getSelectLanguageMenuDefault(){
+        return driver.findElement(languageMenuDefault);
     }
 
 }

@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="AMSiteSuite" verbose="1" parallel="tests">
+    <listeners>
+        <listener class-name="com.automationproject.Listeners"></listener>
+    </listeners>
+    <test name="AMSiteSuiteTestDefault" >
+        <classes>
+            <class name="com.automationproject.AMHomePageTest"/>
+        </classes>
+    </test>
+</suite>
