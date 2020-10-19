@@ -59,10 +59,11 @@ public class BaseClass {
         return property;
     }
 
-    public void takeScreenShot(String testName, WebDriver driver) throws IOException {
+    public String takeScreenShot(String testName, WebDriver driver) throws IOException {
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File source = screenshot.getScreenshotAs(OutputType.FILE);
         String destinationFile = System.getProperty("user.dir") + "//reports//" + testName + ".png";
         FileUtils.copyFile(source, new File(destinationFile));
+        return destinationFile;
     }
 }
