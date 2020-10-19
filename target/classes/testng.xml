@@ -3,7 +3,7 @@
     <listeners>
         <listener class-name="com.automationproject.Listeners"></listener>
     </listeners>
-    <test name="AMSiteSuiteTestDefault" >
+    <test name="AMSiteSuiteTestDefault">
         <classes>
             <class name="com.automationproject.AMHomePageTest"/>
         </classes>

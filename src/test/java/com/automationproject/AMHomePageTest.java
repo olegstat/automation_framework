@@ -6,24 +6,26 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
 
 public class AMHomePageTest extends BaseClass {
+    public static Logger log = LogManager.getLogger(BaseClass.class.getName());
     public WebDriver driver;
     AMHomePage homePage;
-    public static Logger log = LogManager.getLogger(BaseClass.class.getName());
 
     @BeforeClass
-    public void amHomePageSetup() throws IOException{
+    public void amHomePageSetup() throws IOException {
         driver = initWebDriver();
         log.info("Driver is initialized.");
         homePage = new AMHomePage(driver);
         homePageUrl = getHomePageUrl();
         driver.get(homePageUrl);
         log.info("Homepage is loaded.");
-        if (homePage.getDialogPopupCLoseButton().isDisplayed()){
+        if (homePage.getDialogPopupCLoseButton().isDisplayed()) {
             homePage.getDialogPopupCLoseButton().click();
             log.info("Popup window is closed.");
         }
@@ -45,10 +47,10 @@ public class AMHomePageTest extends BaseClass {
     @Test
     public void amHomePageTitleTest() throws IOException {
         String titleText = null;
-        if(homePage.getSelectLanguageMenuDefault().getText().equalsIgnoreCase("ru")){
+        if (homePage.getSelectLanguageMenuDefault().getText().equalsIgnoreCase("ru")) {
             titleText = getTitle("ru");
             log.info("The default language is RU.");
-        }else if(homePage.getSelectLanguageMenuDefault().getText().equalsIgnoreCase("ro")){
+        } else if (homePage.getSelectLanguageMenuDefault().getText().equalsIgnoreCase("ro")) {
             titleText = getTitle("ro");
             log.info("The default language is RO.");
         }
@@ -57,7 +59,7 @@ public class AMHomePageTest extends BaseClass {
     }
 
     @AfterClass
-    public void closeDriver(){
+    public void closeDriver() {
         driver.quit();
         log.info("Driver is closed.");
     }

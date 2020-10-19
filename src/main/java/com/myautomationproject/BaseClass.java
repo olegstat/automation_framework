@@ -20,15 +20,13 @@ public class BaseClass {
     public WebDriver initWebDriver() throws IOException {
         String browserName = getProperty("browser");
 
-        if(browserName.equalsIgnoreCase("chrome")){
+        if (browserName.equalsIgnoreCase("chrome")) {
             System.setProperty("webdriver.chrome.driver", ".//src//main//resources//webdrivers//chromedriver.exe");
             driver = new ChromeDriver();
-        }else if(browserName.equalsIgnoreCase("firefox")){
+        } else if (browserName.equalsIgnoreCase("firefox")) {
             //firefox driver code
-        }else if(browserName.equalsIgnoreCase("ie")){
+        } else if (browserName.equalsIgnoreCase("ie")) {
             //IE driver code
-        }else {
-            System.out.println("No browser detected");
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().deleteAllCookies();
@@ -44,9 +42,9 @@ public class BaseClass {
 
     public String getTitle(String lang) throws IOException {
         String title = null;
-        if(lang.equalsIgnoreCase("ro")){
+        if (lang.equalsIgnoreCase("ro")) {
             title = getProperty("titleRo");
-        }else if(lang.equalsIgnoreCase("ru")){
+        } else if (lang.equalsIgnoreCase("ru")) {
             title = getProperty("titleRu");
         }
         return title;
@@ -56,6 +54,7 @@ public class BaseClass {
         prop = new Properties();
         FileInputStream propFile = new FileInputStream(".//src//main//resources//data.properties");
         prop.load(propFile);
+        propFile.close();
         String property = prop.getProperty(propertyName);
         return property;
     }
@@ -63,7 +62,7 @@ public class BaseClass {
     public void takeScreenShot(String testName, WebDriver driver) throws IOException {
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File source = screenshot.getScreenshotAs(OutputType.FILE);
-        String destinationFile = System.getProperty("user.dir")+"//reports//"+testName+".png";
+        String destinationFile = System.getProperty("user.dir") + "//reports//" + testName + ".png";
         FileUtils.copyFile(source, new File(destinationFile));
     }
 }
