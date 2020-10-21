@@ -54,7 +54,7 @@ public class AMHomePageTest extends BaseClass {
             titleText = getTitle("ro");
             log.info("The default language is RO.");
         }
-        Assert.assertTrue(driver.getTitle().toLowerCase().contains(titleText));
+        Assert.assertTrue(driver.getTitle().contains(titleText));
         log.info("Validated the title according to default language.");
     }
 

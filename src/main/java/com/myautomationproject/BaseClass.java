@@ -5,6 +5,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -13,7 +15,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class BaseClass {
-    public WebDriver driver;
+    private WebDriver driver;
     public String homePageUrl;
     public Properties prop;
 
@@ -24,9 +26,11 @@ public class BaseClass {
             System.setProperty("webdriver.chrome.driver", ".//src//main//resources//webdrivers//chromedriver.exe");
             driver = new ChromeDriver();
         } else if (browserName.equalsIgnoreCase("firefox")) {
-            //firefox driver code
+            System.setProperty("webdriver.gecko.driver", ".//src//main//resources//webdrivers//geckodriver.exe");
+            driver = new FirefoxDriver();
         } else if (browserName.equalsIgnoreCase("ie")) {
-            //IE driver code
+            System.setProperty("webdriver.ie.driver", ".//src//main//resources//webdrivers//IEDriverServer.exe");
+            driver = new InternetExplorerDriver();
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().deleteAllCookies();
