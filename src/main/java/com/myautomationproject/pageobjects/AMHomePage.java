@@ -3,41 +3,51 @@ package com.myautomationproject.pageobjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import java.awt.print.Pageable;
 
 
 public class AMHomePage {
     private WebDriver driver;
 
-    By dialogPopupCloseButton = By.cssSelector("span.ui-button-text");
-    By languageMenuRo = By.xpath("//a[text()='RO']");
-    By languageMenuRu = By.xpath("//a[text()='RU']");
-    By languageMenuDefault = By.cssSelector(".slct");
-    By languageBar = By.cssSelector(".select");
+    @FindBy(css = "span.ui-button-text")
+    WebElement dialogPopupCloseButton;
+    @FindBy(xpath = "//a[text()='RO']")
+    WebElement languageMenuRo;
+    @FindBy(xpath = "//a[text()='RU']")
+    WebElement languageMenuRu;
+    @FindBy(css = ".slct")
+    WebElement languageMenuDefault;
+    @FindBy(css = ".select")
+    WebElement languageBar;
 
     public AMHomePage(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
     public WebElement getDialogPopupCLoseButton() {
-        return driver.findElement(dialogPopupCloseButton);
+        return dialogPopupCloseButton;
     }
 
     public WebElement getLanguageBar() {
-        return driver.findElement(languageBar);
+        return languageBar;
     }
 
     public WebElement getSelectLanguageMenu(String language) {
         WebElement languageMenu = null;
         if (language.equalsIgnoreCase("RO")) {
-            languageMenu = driver.findElement(languageMenuRo);
+            languageMenu = languageMenuRo;
         } else if (language.equalsIgnoreCase("RU")) {
-            languageMenu = driver.findElement(languageMenuRu);
+            languageMenu = languageMenuRu;
         }
         return languageMenu;
     }
 
     public WebElement getSelectLanguageMenuDefault() {
-        return driver.findElement(languageMenuDefault);
+        return languageMenuDefault;
     }
 
 }
