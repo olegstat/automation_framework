@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-10-19T15:11:12 EEST" name="AMSiteSuite" finished-at="2020-10-19T15:11:27 EEST" duration-ms="15064">
+  <suite started-at="2020-10-21T16:31:43 EEST" name="AMSiteSuite" finished-at="2020-10-21T16:31:58 EEST" duration-ms="14813">
     <groups>
     </groups>
-    <test started-at="2020-10-19T15:11:12 EEST" name="AMSiteSuiteTestDefault" finished-at="2020-10-19T15:11:27 EEST" duration-ms="15064">
+    <test started-at="2020-10-21T16:31:43 EEST" name="AMSiteSuiteTestDefault" finished-at="2020-10-21T16:31:58 EEST" duration-ms="14813">
       <class name="com.automationproject.AMHomePageTest">
-        <test-method is-config="true" signature="amHomePageSetup()[pri:0, instance:com.automationproject.AMHomePageTest@7e11ab3d]" started-at="2020-10-19T15:11:12 EEST" name="amHomePageSetup" finished-at="2020-10-19T15:11:22 EEST" duration-ms="10081" status="PASS">
+        <test-method is-config="true" signature="amHomePageSetup()[pri:0, instance:com.automationproject.AMHomePageTest@7e11ab3d]" started-at="2020-10-21T16:31:43 EEST" name="amHomePageSetup" finished-at="2020-10-21T16:31:53 EEST" duration-ms="9652" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- amHomePageSetup -->
-        <test-method signature="amHomePageLanguageChangeTest()[pri:0, instance:com.automationproject.AMHomePageTest@7e11ab3d]" started-at="2020-10-19T15:11:22 EEST" name="amHomePageLanguageChangeTest" finished-at="2020-10-19T15:11:25 EEST" duration-ms="2849" status="PASS">
+        <test-method signature="amHomePageLanguageChangeTest()[pri:0, instance:com.automationproject.AMHomePageTest@7e11ab3d]" started-at="2020-10-21T16:31:53 EEST" name="amHomePageLanguageChangeTest" finished-at="2020-10-21T16:31:56 EEST" duration-ms="3388" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- amHomePageLanguageChangeTest -->
-        <test-method signature="amHomePageTitleTest()[pri:0, instance:com.automationproject.AMHomePageTest@7e11ab3d]" started-at="2020-10-19T15:11:25 EEST" name="amHomePageTitleTest" finished-at="2020-10-19T15:11:26 EEST" duration-ms="995" status="PASS">
+        <test-method signature="amHomePageTitleTest()[pri:0, instance:com.automationproject.AMHomePageTest@7e11ab3d]" started-at="2020-10-21T16:31:56 EEST" name="amHomePageTitleTest" finished-at="2020-10-21T16:31:57 EEST" duration-ms="680" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- amHomePageTitleTest -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:com.automationproject.AMHomePageTest@7e11ab3d]" started-at="2020-10-19T15:11:26 EEST" name="closeDriver" finished-at="2020-10-19T15:11:27 EEST" duration-ms="1037" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:com.automationproject.AMHomePageTest@7e11ab3d]" started-at="2020-10-21T16:31:57 EEST" name="closeDriver" finished-at="2020-10-21T16:31:58 EEST" duration-ms="1029" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->

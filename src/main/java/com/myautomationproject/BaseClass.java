@@ -52,9 +52,8 @@ public class BaseClass {
 
     private String getProperty(String propertyName) throws IOException {
         prop = new Properties();
-        FileInputStream propFile = new FileInputStream(".//src//main//resources//data.properties");
-        prop.load(propFile);
-        propFile.close();
+        FileInputStream propFile = new FileInputStream(".//src//main//resources//dataset.xml");
+        prop.loadFromXML(propFile);
         String property = prop.getProperty(propertyName);
         return property;
     }

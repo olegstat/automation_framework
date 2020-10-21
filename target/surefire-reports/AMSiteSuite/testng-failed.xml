@@ -10,6 +10,7 @@
         <methods>
           <include name="amHomePageLanguageChangeTest"/>
           <include name="closeDriver"/>
+          <include name="amHomePageTitleTest"/>
           <include name="amHomePageSetup"/>
         </methods>
       </class> <!-- com.automationproject.AMHomePageTest -->

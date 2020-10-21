@@ -37,7 +37,7 @@ public class AMHomePageTest extends BaseClass {
         homePage.getLanguageBar().click();
         homePage.getSelectLanguageMenu("ro").click();
         log.info("Language is changed to RO.");
-        Assert.assertTrue(driver.getTitle().contains(titleTextRo));
+        Assert.assertTrue(driver.getTitle().toLowerCase().contains(titleTextRo));
         log.info("Validated the language change.");
         homePage.getLanguageBar().click();
         homePage.getSelectLanguageMenu("ru").click();
@@ -54,7 +54,7 @@ public class AMHomePageTest extends BaseClass {
             titleText = getTitle("ro");
             log.info("The default language is RO.");
         }
-        Assert.assertTrue(driver.getTitle().contains(titleText));
+        Assert.assertTrue(driver.getTitle().toLowerCase().contains(titleText));
         log.info("Validated the title according to default language.");
     }
 
