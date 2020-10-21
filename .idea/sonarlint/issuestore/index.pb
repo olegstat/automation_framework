@@ -10,5 +10,3 @@ Asrc/main/java/com/myautomationproject/pageobjects/AMHomePage.java,8\3\831ce6bf
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-`
-0src/main/java/com/myautomationproject/testng.xml,7\6\76587213f6749f9fc509e1c4af52c07a69e4295a

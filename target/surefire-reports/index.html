@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-AMSiteSuite" class="navigator-link">
-              <span class="suite-name border-failed">AMSiteSuite</span>
+              <span class="suite-name border-passed">AMSiteSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-AMSiteSuite" class="hide-methods failed suite-AMSiteSuite"> (hide)</a> <!-- hide-methods failed suite-AMSiteSuite -->
-                      <a href="#" panel-name="suite-AMSiteSuite" class="show-methods failed suite-AMSiteSuite"> (show)</a> <!-- show-methods failed suite-AMSiteSuite -->
-                    </span>
-                    <div class="method-list-content failed suite-AMSiteSuite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-AMSiteSuite" title="com.automationproject.AMHomePageTest" class="method navigator-link" hash-for-method="amHomePageLanguageChangeTest">amHomePageLanguageChangeTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-AMSiteSuite -->
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -116,6 +102,11 @@
                       <a href="#" panel-name="suite-AMSiteSuite" class="show-methods passed suite-AMSiteSuite"> (show)</a> <!-- show-methods passed suite-AMSiteSuite -->
                     </span>
                     <div class="method-list-content passed suite-AMSiteSuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AMSiteSuite" title="com.automationproject.AMHomePageTest" class="method navigator-link" hash-for-method="amHomePageLanguageChangeTest">amHomePageLanguageChangeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-AMSiteSuite" title="com.automationproject.AMHomePageTest" class="method navigator-link" hash-for-method="amHomePageTitleTest">amHomePageTitleTest</a> <!-- method navigator-link -->
@@ -133,9 +124,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-AMSiteSuite" class="panel AMSiteSuite">
-          <div class="suite-AMSiteSuite-class-failed">
+          <div class="suite-AMSiteSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.automationproject.AMHomePageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -144,25 +135,8 @@
                   <a name="amHomePageLanguageChangeTest">
                   </a> <!-- amHomePageLanguageChangeTest -->
                   <span class="method-name">amHomePageLanguageChangeTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [2] but found [1]
-	at com.automationproject.AMHomePageTest.amHomePageLanguageChangeTest(AMHomePageTest.java:43)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-AMSiteSuite-class-failed -->
-          <div class="suite-AMSiteSuite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.automationproject.AMHomePageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="amHomePageTitleTest">
@@ -231,16 +205,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'amHomePageLanguageChangeTest')
 data.setCell(0, 2, 'com.automationproject.AMHomePageTest')
-data.setCell(0, 3, 3101);
+data.setCell(0, 3, 2849);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'amHomePageTitleTest')
 data.setCell(1, 2, 'com.automationproject.AMHomePageTest')
-data.setCell(1, 3, 2115);
+data.setCell(1, 3, 995);
 window.suiteTableData['AMSiteSuite']= { tableData: data, tableDiv: 'times-div-AMSiteSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-AMSiteSuite">
               </div> <!-- times-div-AMSiteSuite -->
             </div> <!-- times-div -->
@@ -272,18 +246,16 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">amHomePageLanguageChangeTest</span>
-                <span class="method-start">9529 ms</span>
+                <span class="method-start">10138 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">amHomePageTitleTest</span>
-                <span class="method-start">14174 ms</span>
+                <span class="method-start">12999 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">16291 ms</span>
+                <span class="method-start">13995 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
