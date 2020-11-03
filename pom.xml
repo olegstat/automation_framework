@@ -23,6 +23,8 @@
                     <configuration>
                         <suiteXmlFiles>
                             <suiteXmlFile>./src/main/resources/testng.xml</suiteXmlFile>
+                            <!-- this is used for running cucumber using maven..-->
+                            <!--<suiteXmlFile>./src/main/resources/testngCucumber.xml</suiteXmlFile>-->
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>
@@ -74,6 +76,11 @@
             <groupId>io.cucumber</groupId>
             <artifactId>gherkin</artifactId>
             <version>15.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>6.8.2</version>
         </dependency>
     </dependencies>
 

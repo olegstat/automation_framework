@@ -25,6 +25,7 @@ public class AMHomePageTest extends BaseClass {
         homePageUrl = getHomePageUrl();
         driver.get(homePageUrl);
         log.info("Homepage is loaded.");
+        
         if (homePage.getDialogPopupCLoseButton().isDisplayed()) {
             homePage.getDialogPopupCLoseButton().click();
             log.info("Popup window is closed.");
