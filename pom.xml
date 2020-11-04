@@ -24,7 +24,7 @@
                         <suiteXmlFiles>
                             <suiteXmlFile>./src/main/resources/testng.xml</suiteXmlFile>
                             <!-- this is used for running cucumber using maven..-->
-                            <!--<suiteXmlFile>./src/main/resources/testngCucumber.xml</suiteXmlFile>-->
+                            <suiteXmlFile>./src/main/resources/testngCucumber.xml</suiteXmlFile>
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>

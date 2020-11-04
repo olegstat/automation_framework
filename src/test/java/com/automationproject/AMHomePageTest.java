@@ -9,11 +9,12 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import stepDefinitions.LoginStepDefinition;
 
 import java.io.IOException;
 
 public class AMHomePageTest extends BaseClass {
-    public static Logger log = LogManager.getLogger(BaseClass.class.getName());
+    public static Logger log = LogManager.getLogger(LoginStepDefinition.class.getName());
     public WebDriver driver;
     AMHomePage homePage;
 
@@ -25,9 +26,9 @@ public class AMHomePageTest extends BaseClass {
         homePageUrl = getHomePageUrl();
         driver.get(homePageUrl);
         log.info("Homepage is loaded.");
-        
-        if (homePage.getDialogPopupCLoseButton().isDisplayed()) {
-            homePage.getDialogPopupCLoseButton().click();
+
+        if (homePage.getDialogPopupCloseButton().isDisplayed()) {
+            homePage.getDialogPopupCloseButton().click();
             log.info("Popup window is closed.");
         }
     }
