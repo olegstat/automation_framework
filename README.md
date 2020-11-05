@@ -3,25 +3,15 @@
 **Used tech stack:**
 
 `Maven`
-
 `Selenium WebDriver`
-
 `Jenkins`
-
 `Java`
-
 `Cucumber`
-
 `Gherkin`
-
 `Page Object Model Framework`
-
 `Page Factory Framework`
-
 `TestNG`
-
 `Log4j 2`
-
 `Extent Reports`
 
 **Features:**
@@ -40,6 +30,4 @@
 
 `Behaviour Driven Framework`
 
-`Log4j 2 Reports and Logs`
-
-`etc`
+`Log4j 2 and Extend HTML Reports and Logs`
