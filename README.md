@@ -16,7 +16,7 @@
 
 **Features:**
 
-`Jenkins Parametrized Build - browser options, headless mode, framework type`
+`Jenkins Parametrized Build - browser type, headless mode, framework type`
 
 `Extent HTML Reports and TestNG trendlines in Jenkins`
 
