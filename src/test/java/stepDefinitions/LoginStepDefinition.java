@@ -2,8 +2,6 @@ package stepDefinitions;
 
 import com.myautomationproject.BaseClass;
 import com.myautomationproject.pageobjects.AMHomePage;
-import io.cucumber.java.PendingException;
-import io.cucumber.java.bs.A;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

@@ -5,6 +5,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
@@ -14,16 +15,27 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import static java.lang.System.getProperty;
+
 public class BaseClass {
     private WebDriver driver;
     public String homePageUrl;
     public Properties prop;
 
     public WebDriver initWebDriver() throws IOException {
-        String browserName = getProperty("browser");
+            String browserName = "";
+        if(System.getProperty("browser")==null){
+            browserName = getProperty("browser");
+        }else{
+            browserName = System.getProperty("browser");
+        }
 
-        if (browserName.equalsIgnoreCase("chrome")) {
+        if (browserName.contains("chrome")) {
             System.setProperty("webdriver.chrome.driver", ".//src//main//resources//webdrivers//chromedriver.exe");
+            ChromeOptions options = new ChromeOptions();
+            if(browserName.contains("headless")){
+                options.addArguments("headless");
+            }
             driver = new ChromeDriver();
         } else if (browserName.equalsIgnoreCase("firefox")) {
             System.setProperty("webdriver.gecko.driver", ".//src//main//resources//webdrivers//geckodriver.exe");
@@ -65,7 +77,7 @@ public class BaseClass {
     public String takeScreenShot(String testName, WebDriver driver) throws IOException {
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File source = screenshot.getScreenshotAs(OutputType.FILE);
-        String destinationFile = System.getProperty("user.dir") + "//reports//" + testName + ".png";
+        String destinationFile = getProperty("user.dir") + "//reports//" + testName + ".png";
         FileUtils.copyFile(source, new File(destinationFile));
         return destinationFile;
     }
