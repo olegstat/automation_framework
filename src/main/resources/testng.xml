@@ -3,9 +3,9 @@
     <listeners>
         <listener class-name="com.automationproject.Listeners"/>
     </listeners>
-    <test name="AMSiteSuiteTestDefault">
+    <test name="LoginLogoutTest">
         <classes>
-            <class name="com.automationproject.LoginTest"/>
+            <class name="com.automationproject.LoginLogoutTest"/>
         </classes>
     </test>
 </suite>

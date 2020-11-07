@@ -13,7 +13,7 @@ import stepDefinitions.LoginStepDefinition;
 
 import java.io.IOException;
 
-public class LoginTest extends BaseClass {
+public class LoginLogoutTest extends BaseClass {
     public static Logger log = LogManager.getLogger(LoginStepDefinition.class.getName());
     public WebDriver driver;
     AMHomePage homePage;
