@@ -3,7 +3,7 @@
     <listeners>
         <listener class-name="com.automationproject.Listeners"/>
     </listeners>
-    <test name="LoginTestCucumber">
+    <test name="TestCucumber">
         <classes>
             <class name="cucumberOptions.TestRunner"/>
         </classes>

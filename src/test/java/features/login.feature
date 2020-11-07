@@ -1,5 +1,4 @@
-Feature: Site Login And Log Out
-
+Feature: Login Test
   Scenario Outline: Default login and logout from the home page
     Given Unlogged user is on the home page "https://automall.md"
     When User logs in with <username> and <password>
@@ -10,4 +9,4 @@ Feature: Site Login And Log Out
 
     Examples:
     |username |password |userid  |
-    |oleg.statnii@automall.md  |#### |28673 |
+    |oleg.statnii@automall.md  |lana1414 |28673 |

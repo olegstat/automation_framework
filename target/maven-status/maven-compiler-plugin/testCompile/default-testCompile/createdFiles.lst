@@ -1,2 +1,7 @@
 com\automationproject\ExtentReporterNG.class
+stepDefinitions\LoginStepDefinition.class
+stepDefinitions\MyStepdefs.class
+stepDefinitions\TyreSearchStepDefinition.class
+com\automationproject\LoginLogoutTest.class
 com\automationproject\Listeners.class
+cucumberOptions\TestRunner.class
