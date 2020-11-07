@@ -44,7 +44,7 @@ public class BaseClass {
             System.setProperty("webdriver.ie.driver", ".//src//main//resources//webdrivers//IEDriverServer.exe");
             driver = new InternetExplorerDriver();
         }
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         return driver;
@@ -66,7 +66,7 @@ public class BaseClass {
         return title;
     }
 
-    private String getProperty(String propertyName) throws IOException {
+    public String getProperty(String propertyName) throws IOException {
         prop = new Properties();
         FileInputStream propFile = new FileInputStream(".//src//main//resources//dataset.xml");
         prop.loadFromXML(propFile);

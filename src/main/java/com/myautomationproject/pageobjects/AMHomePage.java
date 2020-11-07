@@ -13,16 +13,8 @@ import java.awt.print.Pageable;
 public class AMHomePage {
     private WebDriver driver;
 
-    @FindBy(css = "span.ui-button-text")
+    @FindBy(css = "button.button-submit")
     WebElement dialogPopupCloseButton;
-    @FindBy(xpath = "//a[text()='RO']")
-    WebElement languageMenuRo;
-    @FindBy(xpath = "//a[text()='RU']")
-    WebElement languageMenuRu;
-    @FindBy(css = ".slct")
-    WebElement languageMenuDefault;
-    @FindBy(css = ".select")
-    WebElement languageBar;
     @FindBy(css = "input[type='email']")
     WebElement loginField;
     @FindBy(css = "input[type='password']")
@@ -51,24 +43,6 @@ public class AMHomePage {
 
     public WebElement getDialogPopupCloseButton(){
         return dialogPopupCloseButton;
-    }
-
-    public WebElement getLanguageBar() {
-        return languageBar;
-    }
-
-    public WebElement getSelectLanguageMenu(String language) {
-        WebElement languageMenu = null;
-        if (language.equalsIgnoreCase("RO")) {
-            languageMenu = languageMenuRo;
-        } else if (language.equalsIgnoreCase("RU")) {
-            languageMenu = languageMenuRu;
-        }
-        return languageMenu;
-    }
-
-    public WebElement getSelectLanguageMenuDefault() {
-        return languageMenuDefault;
     }
 
     public WebElement getLoginField(){

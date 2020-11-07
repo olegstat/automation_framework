@@ -58,8 +58,16 @@ public class LoginStepDefinition extends BaseClass {
         log.info("The UserID of the logged user is correct: " + userid);
     }
 
+    @And("Users logs out")
+    public void usersLogsOut() {
+        homePage.getButtonExit().click();
+        Assert.assertTrue(homePage.getLoginSubmitField().isDisplayed());
+        log.info("User was successfully logged out");
+    }
+
     @And("^Close browsers$")
     public void closeBrowsers() {
         driver.quit();
     }
+
 }
