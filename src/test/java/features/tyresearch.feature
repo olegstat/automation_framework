@@ -1,5 +1,5 @@
 Feature: Tyre Search Test
-  Scenario Outline: Default tyre search accessed from the main page
+  Scenario Outline: Default tyre search test
     Given User is on the home page "https://automall.md"
     When User clicks on the tyre search link
     Then User selects tyre width <width>
@@ -9,8 +9,9 @@ Feature: Tyre Search Test
     And User clicks on the show results button
     And User clicks on the row view button
     And Results are present on the page
-    And All the product codes with quantity more that zero are printed in the console
+    And All the product codes with quantity more than zero are printed in the console
     And Close browsers TyreSearch
-
     Examples:
-      | width | height | diameter | season |
+      | width | height |  diameter |  season |
+      | 100  |  200 | 15 |  winter |
+

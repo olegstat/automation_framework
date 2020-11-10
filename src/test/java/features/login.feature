@@ -6,7 +6,6 @@ Feature: Login Test
     And Correct <userid> is displayed on the page
     And Users logs out
     And Close browsers
-
     Examples:
-    |username |password |userid  |
-    |oleg.statnii@automall.md  |lana1414 |28673 |
+    | username |  password |  userid  |
+    | oleg.statnii@automall.md  | ! |  28673 |
