@@ -8,6 +8,7 @@
 `Java`
 `Cucumber`
 `Gherkin`
+`Apache POI (Excel)`
 `Page Object Model Framework`
 `Page Factory Framework`
 `TestNG`
@@ -21,13 +22,13 @@
 `Extent HTML Reports and TestNG trendlines in Jenkins`
 
 `Thread Safe`
+`Parallel run`
 
 `Includes both Page Object/Page Factory Framework and Cucumber Framework`
 
 `Supports multiple browsers`
 
 `Data Driven Framework`
-
 `Behaviour Driven Framework`
 
 `Log4j 2 and Extend HTML Reports and Logs`

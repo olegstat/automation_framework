@@ -1,13 +1,9 @@
-package stepDefinitions;
+package com.automationproject;
 
 import com.myautomationproject.BaseClass;
 import com.myautomationproject.pageobjects.AMHomePage;
 import com.myautomationproject.pageobjects.AMTyreSearch;
 import com.myautomationproject.pageobjects.AMTyreSearchResults;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.poi.ss.usermodel.Row;
@@ -19,26 +15,37 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import stepDefinitions.LoginStepDefinition;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-public class TyreSearchStepDefinition extends BaseClass {
+import static org.testng.TestRunner.PriorityWeight.dependsOnMethods;
+
+public class TyreSearchTest extends BaseClass {
     public static Logger log = LogManager.getLogger(LoginStepDefinition.class.getName());
     public WebDriver driver;
     AMHomePage homePage;
     AMTyreSearch tyreSearch;
     AMTyreSearchResults tyreSearchResults;
+    String width;
+    String height;
+    String diameter;
+    String season;
 
-    @Given("^User is on the home page \"([^\"]*)\"$")
-    public void userIsOnTheHomePage(String url) throws IOException {
+    @BeforeClass
+    public void amHomePageSetup() throws IOException {
         driver = initWebDriver();
+        log.info("Driver is initialized.");
         homePage = new AMHomePage(driver);
-        driver.get(url);
+        homePageUrl = getHomePageUrl();
+        driver.get(homePageUrl);
         if(homePage.closePopupWindow()){
             log.info("Popup window was closed");
         }
@@ -46,65 +53,42 @@ public class TyreSearchStepDefinition extends BaseClass {
         log.info("Homepage was loaded successfully");
     }
 
-    @When("^User clicks on the tyre search link$")
-    public void userClicksOnTheTyreSearchLink(){
+    @Test
+    public void tyreSearchParametersTest() throws IOException, InterruptedException {
+        width = getProperty("width");
+        height = getProperty("height");
+        diameter = getProperty("diameter");
+        season = getProperty("season");
+
         tyreSearch = homePage.getTyreSearchObject();
         log.info("Navigated to Tyre Search Page");
-    }
-
-    @Then("^User selects tyre width (.+)$")
-    public void userSelectsTyreWidth(String width) throws InterruptedException {
         tyreSearch.getWidthInput().clear();
         tyreSearch.getWidthInput().sendKeys(width);
         tyreSearch.getWidthInput().sendKeys(Keys.TAB);
         log.info("Typed width: " + width);
-    }
-
-    @And("^User selects tyre height (.+)$")
-    public void userSelectsTyreHeight(String height) throws InterruptedException {
         tyreSearch.getHeightInput().clear();
         tyreSearch.getHeightInput().sendKeys(height);
         tyreSearch.getHeightInput().sendKeys(Keys.TAB);
         log.info("Typed height: " + height);
-    }
-
-    @And("^User selects tyre diameter (.+)$")
-    public void userSelectsTyreDiameter(String diameter) throws InterruptedException {
         tyreSearch.getDiameterInput().clear();
         tyreSearch.getDiameterInput().sendKeys(diameter);
         tyreSearch.getDiameterInput().sendKeys(Keys.TAB);
         log.info("Typed diameter: " + diameter);
-    }
-
-    @And("^User selects tyre season (.+)$")
-    public void userSelectsTyreSeason(String season) throws InterruptedException {
         tyreSearch.getSeasonInput().clear();
         tyreSearch.getSeasonInput().sendKeys(season);
         tyreSearch.getSeasonInput().sendKeys(Keys.TAB);
         log.info("Selected tyre season: " + season);
-    }
-
-    @And("^User clicks on the show results button$")
-    public void userClicksOnTheShowResultsButton(){
         tyreSearchResults = tyreSearch.getTyreSearchResultsObject();
         log.info("Clicked on show results button.");
         Assert.assertEquals(tyreSearchResults.getPageH2().getText(),"Шины");
         log.info("Results page successfully loaded");
     }
 
-    @And("^User clicks on the row view button$")
-    public void userClicksOnTheRowViewButton(){
+    @Test(dependsOnMethods = {"tyreSearchParametersTest"})
+    public void saveProductsToExcelTest() throws IOException {
         tyreSearchResults.getRowViewBtn().click();
-    }
-
-    @And("^User selects hundred values per page view$")
-    public void userSelectsHundredValuesPerPageView() {
         Select slt = new Select(tyreSearchResults.getPageSizeSlt());
         slt.selectByVisibleText("100");
-    }
-
-    @And("^All the product codes are saved in excel$")
-    public void allTheProductCodesAreSavedInExcel() throws IOException {
         List<WebElement> tyreCodes = tyreSearchResults.getProductCodes();
         Workbook workbook = new XSSFWorkbook();
         Sheet sheet = workbook.createSheet("Search Results");
@@ -122,34 +106,21 @@ public class TyreSearchStepDefinition extends BaseClass {
         log.info("Generated and saved Excel file with product codes");
     }
 
-    @And("^Tyre season (.+) corresponds$")
-    public void tyreSeasonCorresponds(String season){
+    @Test(dependsOnMethods = {"tyreSearchParametersTest"})
+    public void correspondenceOfSelectedParametersTest(){
         Assert.assertEquals(tyreSearchResults.getSeasonField().getText(), season);
         log.info("Season check passed: " + season);
-    }
-
-    @And("^Tyre width (.+) corresponds$")
-    public void tyreWidthCorresponds(String width){
         Assert.assertEquals(tyreSearchResults.getWidthField().getText(), width);
         log.info("Width check passed: " + width);
-    }
-
-    @And("^Tyre height (.+) corresponds$")
-    public void tyreHeightCorresponds(String height){
         Assert.assertEquals(tyreSearchResults.getHeightField().getText(), height);
         log.info("Height check passed: " + height);
-    }
-
-    @And("^Tyre diameter (.+) corresponds$")
-    public void tyreDiameterCorresponds(String diameter){
         Assert.assertTrue(tyreSearchResults.getDiameterField().getText().contains(diameter));
         log.info("Diameter check passed: " + diameter);
     }
 
-    @And("^Close browsers TyreSearch$")
-    public void closeBrowsersTyreSearch(){
-        driver.close();
-        log.info("Browser closed.");
+    @AfterClass
+    public void closeDriver() {
+        driver.quit();
+        log.info("Driver is closed.");
     }
-
 }

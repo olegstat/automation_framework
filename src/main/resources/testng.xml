@@ -3,9 +3,16 @@
     <listeners>
         <listener class-name="com.automationproject.Listeners"/>
     </listeners>
-    <test name="LoginLogoutTest">
+<!--    <test name="LoginLogoutTest">-->
+<!--        <classes>-->
+<!--            <class name="com.automationproject.LoginLogoutTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="TyreSearchTest">
         <classes>
-            <class name="com.automationproject.LoginLogoutTest"/>
+            <class name ='com.automationproject.TyreSearchTest'/>
         </classes>
     </test>
 </suite>
+
+
