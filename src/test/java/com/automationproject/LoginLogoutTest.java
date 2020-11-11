@@ -25,9 +25,8 @@ public class LoginLogoutTest extends BaseClass {
         homePage = new AMHomePage(driver);
         homePageUrl = getHomePageUrl();
         driver.get(homePageUrl);
-        if (homePage.getDialogPopupCloseButton().isDisplayed()) {
-            homePage.getDialogPopupCloseButton().click();
-            log.info("Popup window is closed.");
+        if(homePage.closePopupWindow()){
+            log.info("Popup window was closed");
         }
         Assert.assertTrue(driver.getTitle().contains(getTitle("ru")));
         log.info("Homepage was loaded successfully");

@@ -1,30 +1,28 @@
 package com.myautomationproject.pageobjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-
-import java.awt.print.Pageable;
 
 
 public class AMHomePage {
     private WebDriver driver;
 
     @FindBy(css = "button.button-submit")
-    WebElement dialogPopupCloseButton;
+    private WebElement dialogPopupCloseButton;
     @FindBy(css = "input[type='email']")
-    WebElement loginField;
+    private WebElement loginField;
     @FindBy(css = "input[type='password']")
-    WebElement pwField;
+    private WebElement pwField;
     @FindBy(css = "input[type='submit']")
-    WebElement loginSubmitField;
+    private WebElement loginSubmitField;
     @FindBy(id = "button-exit")
-    WebElement buttonExit;
+    private WebElement buttonExit;
     @FindBy(css = "a[id='client'] span")
-    WebElement clientIdField;
+    private WebElement clientIdField;
+    @FindBy(css = "a[class*=bus")
+    private WebElement tyreSearchLink;
 
     public AMHomePage(WebDriver driver) {
         this.driver = driver;
@@ -63,5 +61,19 @@ public class AMHomePage {
 
     public WebElement getClientIdField() {
         return clientIdField;
+    }
+
+    public AMTyreSearch getTyreSearchObject(){
+        tyreSearchLink.click();
+        return new AMTyreSearch(driver);
+    }
+
+    public Boolean closePopupWindow(){
+        Boolean status = Boolean.FALSE;
+        if(getPopupWindowStatus()){
+            getDialogPopupCloseButton().click();
+            status = Boolean.TRUE;
+        }
+        return status;
     }
 }

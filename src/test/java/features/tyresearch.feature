@@ -8,10 +8,14 @@ Feature: Tyre Search Test
     And User selects tyre season <season>
     And User clicks on the show results button
     And User clicks on the row view button
-    And Results are present on the page
-    And All the product codes with quantity more than zero are printed in the console
+    And User selects hundred value per page
+    And All the product codes are saved in excel
+    And Tyre <season> corresponds
+    And Tyre <width> corresponds
+    And Tyre <height> corresponds
+    And Tyre <diameter> corresponds
     And Close browsers TyreSearch
     Examples:
       | width | height |  diameter |  season |
-      | 100  |  200 | 15 |  winter |
+      | 175  |  65 | 14 |  Зимние шины |
 

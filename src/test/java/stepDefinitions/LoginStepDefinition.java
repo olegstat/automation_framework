@@ -24,12 +24,12 @@ public class LoginStepDefinition extends BaseClass {
         homePage = new AMHomePage(driver);
         log.info("Driver was initialized");
         driver.get(url);
-        Assert.assertTrue(driver.getTitle().contains(getTitle("ru")));
-        log.info("Homepage was loaded successfully");
-        if(homePage.getPopupWindowStatus()){
-            homePage.getDialogPopupCloseButton().click();
+        if(homePage.closePopupWindow()){
             log.info("Popup window was closed");
         }
+        Assert.assertTrue(driver.getTitle().contains(getTitle("ru")));
+        log.info("Homepage was loaded successfully");
+
     }
 
     @When("^User logs in with (.+) and (.+)$")
