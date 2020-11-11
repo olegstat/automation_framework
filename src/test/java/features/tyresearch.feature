@@ -8,12 +8,12 @@ Feature: Tyre Search Test
     And User selects tyre season <season>
     And User clicks on the show results button
     And User clicks on the row view button
-    And User selects hundred value per page
+    And User selects hundred values per page view
     And All the product codes are saved in excel
-    And Tyre <season> corresponds
-    And Tyre <width> corresponds
-    And Tyre <height> corresponds
-    And Tyre <diameter> corresponds
+    And Tyre season <season> corresponds
+    And Tyre width <width> corresponds
+    And Tyre height <height> corresponds
+    And Tyre diameter <diameter> corresponds
     And Close browsers TyreSearch
     Examples:
       | width | height |  diameter |  season |

@@ -48,6 +48,7 @@ public class TyreSearchStepDefinition extends BaseClass {
     @When("^User clicks on the tyre search link$")
     public void userClicksOnTheTyreSearchLink(){
         tyreSearch = homePage.getTyreSearchObject();
+        log.info("Navigated to Tyre Search Page");
     }
 
     @Then("^User selects tyre width (.+)$")
@@ -55,6 +56,7 @@ public class TyreSearchStepDefinition extends BaseClass {
         tyreSearch.getWidthInput().clear();
         tyreSearch.getWidthInput().sendKeys(width);
         Thread.sleep(200);
+        log.info("Typed width: " + width);
     }
 
     @And("^User selects tyre height (.+)$")
@@ -62,6 +64,7 @@ public class TyreSearchStepDefinition extends BaseClass {
         tyreSearch.getHeightInput().clear();
         tyreSearch.getHeightInput().sendKeys(height);
         Thread.sleep(200);
+        log.info("Typed height: " + height);
     }
 
     @And("^User selects tyre diameter (.+)$")
@@ -69,6 +72,7 @@ public class TyreSearchStepDefinition extends BaseClass {
         tyreSearch.getDiameterInput().clear();
         tyreSearch.getDiameterInput().sendKeys(diameter);
         Thread.sleep(200);
+        log.info("Typed diameter: " + diameter);
     }
 
     @And("^User selects tyre season (.+)$")
@@ -76,11 +80,15 @@ public class TyreSearchStepDefinition extends BaseClass {
         tyreSearch.getSeasonInput().clear();
         tyreSearch.getSeasonInput().sendKeys(season);
         Thread.sleep(200);
+        log.info("Selected tyre season: " + season);
     }
 
     @And("^User clicks on the show results button$")
     public void userClicksOnTheShowResultsButton(){
         tyreSearchResults = tyreSearch.getTyreSearchResultsObject();
+        log.info("Clicked on show results button.");
+        Assert.assertEquals(tyreSearchResults.getPageH2().getText(),"Шины");
+        log.info("Results page successfully loaded");
     }
 
     @And("^User clicks on the row view button$")
@@ -88,8 +96,8 @@ public class TyreSearchStepDefinition extends BaseClass {
         tyreSearchResults.getRowViewBtn().click();
     }
 
-    @And("^User selects hundred value per page$")
-    public void userSelects100ValuesPerPage() throws InterruptedException {
+    @And("^User selects hundred values per page view$")
+    public void userSelectsHundredValuesPerPageView() {
         Select slt = new Select(tyreSearchResults.getPageSizeSlt());
         slt.selectByVisibleText("100");
     }
@@ -112,28 +120,34 @@ public class TyreSearchStepDefinition extends BaseClass {
         workbook.close();
     }
 
-    @And("^Tyre (.+) corresponds$")
+    @And("^Tyre season (.+) corresponds$")
     public void tyreSeasonCorresponds(String season){
+        Assert.assertEquals(tyreSearchResults.getSeasonField().getText(), season);
+        log.info("Season check passed: " + season);
     }
 
-    @And("^Tyre (.+) corresponds$")
+    @And("^Tyre width (.+) corresponds$")
     public void tyreWidthCorresponds(String width){
-
+        Assert.assertEquals(tyreSearchResults.getWidthField().getText(), width);
+        log.info("Width check passed: " + width);
     }
 
-    @And("^Tyre (.+) corresponds$")
+    @And("^Tyre height (.+) corresponds$")
     public void tyreHeightCorresponds(String height){
-
+        Assert.assertEquals(tyreSearchResults.getHeightField().getText(), height);
+        log.info("Height check passed: " + height);
     }
 
-    @And("^Tyre (.+) corresponds$")
+    @And("^Tyre diameter (.+) corresponds$")
     public void tyreDiameterCorresponds(String diameter){
-
+        Assert.assertTrue(tyreSearchResults.getDiameterField().getText().contains(diameter));
+        log.info("Diameter check passed: " + diameter);
     }
 
     @And("^Close browsers TyreSearch$")
     public void closeBrowsersTyresearch(){
-        driver.quit();
+        driver.close();
+        log.info("Browser closed.");
     }
 
 }

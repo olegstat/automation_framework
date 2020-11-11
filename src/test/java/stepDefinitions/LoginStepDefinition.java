@@ -67,7 +67,7 @@ public class LoginStepDefinition extends BaseClass {
 
     @And("^Close browsers$")
     public void closeBrowsers() {
-        driver.quit();
+        driver.close();
+        log.info("Browser closed");
     }
-
 }

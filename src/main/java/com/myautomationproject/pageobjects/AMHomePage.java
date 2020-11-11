@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 
 public class AMHomePage {
-    private WebDriver driver;
+    public WebDriver driver;
 
     @FindBy(css = "button.button-submit")
     private WebElement dialogPopupCloseButton;

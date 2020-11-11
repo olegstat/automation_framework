@@ -15,10 +15,8 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import static java.lang.System.getProperty;
-
 public class BaseClass {
-    private WebDriver driver;
+    public WebDriver driver;
     public String homePageUrl;
     public Properties prop;
 

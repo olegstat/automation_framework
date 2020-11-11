@@ -8,4 +8,4 @@ Feature: Login Test
     And Close browsers
     Examples:
     | username |  password |  userid  |
-    | oleg.statnii@automall.md  | ! |  28673 |
+    | oleg.statnii@automall.md  | ~~~ |  28673 |
